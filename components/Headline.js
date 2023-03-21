@@ -8,14 +8,15 @@ export function Headline(props) {
   console.log(props);
 
   return (
-    <div>
+    <div className={styles.Headline}>
       <h1 className={styles.title}>{props.title} Page</h1>
 
       <a href={link}>{props.link}</a>
 
       <p className={styles.description}>
         Get started by editing
-        <code className={styles.code}>pages/{props.props}.js</code>
+        {/* <code className={styles.code}>pages/{props.link}.js</code> */}
+        {props.children}
       </p>
     </div>
   );
