@@ -6,13 +6,13 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Index Page</title>
+        <title>About Page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Index Page</h1>
-        <a href="/about">about</a>{" "}
+        <h1 className={styles.title}>About Page</h1>
+        <a href="/">top</a>{" "}
         <p className={styles.description}>
           Get started by editing <code>pages/index.js</code>
         </p>
