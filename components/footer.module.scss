@@ -8,19 +8,19 @@
   margin-top: auto;
   //   position: absolute;
   bottom: 0;
+}
 
-  img {
-    margin-left: 0.5rem;
-  }
+.footer img {
+  margin-left: 0.5rem;
+}
 
-  a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-  }
-  .logo {
-    height: 1em;
-  }
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+.logo {
+  height: 1em;
 }
