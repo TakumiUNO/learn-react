@@ -1,4 +1,4 @@
-import styles from "../styles/Home.module.css";
+import classes from "./Headline.module.css";
 
 export function Headline(props) {
   let link = props.link;
@@ -8,14 +8,14 @@ export function Headline(props) {
   console.log(props);
 
   return (
-    <div className={styles.Headline}>
-      <h1 className={styles.title}>{props.title} Page</h1>
+    <div className={classes.Headline}>
+      <h1 className={classes.title}>{props.title} Page</h1>
 
       <a href={link}>{props.link}</a>
 
-      <p className={styles.description}>
+      <p className={classes.description}>
         Get started by editing
-        {/* <code className={styles.code}>pages/{props.link}.js</code> */}
+        {/* <code className={classes.code}>pages/{props.link}.js</code> */}
         {props.children}
       </p>
     </div>
