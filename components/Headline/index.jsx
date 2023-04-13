@@ -5,7 +5,7 @@ export function Headline(props) {
   if (props.link == "index") {
     link = "/";
   }
-  console.log(props);
+  // console.log(props);
 
   return (
     <div className={classes.Headline}>
