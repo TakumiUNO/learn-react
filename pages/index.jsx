@@ -7,6 +7,8 @@ import { useCallback, useEffect, useState } from "react";
 
 export default function Home() {
   const [count, setCount] = useState(1);
+  const [text, setText] = useState("");
+  const [isShow, setIsShow] = useState(true);
 
   const handleClick = useCallback(() => {
     console.log(count);
@@ -14,6 +16,18 @@ export default function Home() {
       setCount((count) => count + 1);
     }
   }, [count]);
+
+  const handleChange = useCallback((e) => {
+    if (e.target.value.length > 10) {
+      alert("10文字以内にしてください");
+      return;
+    }
+    setText(e.target.value.trim());
+  }, []);
+
+  const handleDisplay = useCallback((e) => {
+    setIsShow((isShow) => !isShow);
+  }, []);
 
   useEffect(() => {
     document.body.style.backgroundColor = "lightblue";
@@ -28,9 +42,12 @@ export default function Home() {
         <title>Index Page</title>
       </Head>
 
-      <Header></Header>
-      <h1>{count}</h1>
+      <Header />
+
+      {isShow ? <h1>{count}</h1> : null}
       <button onClick={handleClick}>button</button>
+      <button onClick={handleDisplay}>{isShow ? "表示" : "非表示"}</button>
+      <input type="text" value={text} onChange={handleChange} name="" id="" />
 
       <Main title="index" link="about" />
 
